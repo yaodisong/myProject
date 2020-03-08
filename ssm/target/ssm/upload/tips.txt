@@ -1,0 +1,65 @@
+Spring IOC/AOP 原理；加载过程的。。。
+
+redis分布式锁
+
+
+设备用户名root
+密码 094b532f
+
+
+tcpsvd 0:21 ftpd ftpd -w /tmp
+killall tcpsvd
+tcpsvd 0:21 ftpd ftpd -w / &   （&表示在后台运行）
+
+tftp 192.168.9.143 -gr device.elf
+chmod 777 device.elf
+./device.elf
+
+
+2019.11.30
+11.20 2h
+11.25 2h
+11.27 2h
+11.30 6h
+
+1.分片上传 √
+2.秒传 （前端计算要上传的文件md5值，上传前与后端验证，存在该md5值则直接上传成功，反正普通上传并记录md5到数据库）
+3.断点续传（*记录写文件的位置使用RandomAccessFile继续写文件）
+
+开发中高效的文件读写
+
+springtask
+
+
+2019.12.4
+12.2 2h
+12.4 2h
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
