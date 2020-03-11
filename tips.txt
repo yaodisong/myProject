@@ -1,0 +1,312 @@
+windows环境下
+netstat -ano //查询端口占用情况
+tasklist //查询运行进程列表
+xxx|findstr "xxx" //对查询结果进行筛选
+
+
+虚拟机玩法
+1.装VMware Workstation
+2.创建虚拟机，配置虚拟机，安装虚拟机
+3.安装并注册SecureCRT，开放虚拟机的远程访问权限
+4.配置CRT背景颜色及字体（方便识别不同状态）
+5.启用SFTP来开启远程对虚拟机传送文件的功能
+
+
+快捷键
+1.ctrl+shift+n //新建文件夹
+2.windows+r //输入osk 虚拟键盘
+3.ctrl+w //关闭当前浏览器文档
+
+clientY(clientX)
+offsetHeight,offsetWidth,offsetTop,offsetBottom等
+
+
+1）List/Set/Map内部组成原理|区别
+2）mysql索引存储结构&如何调优/b-tree特点、计算复杂度及影响复杂度的因素。。。
+3）JVM运行组成与原理及调优
+4）Java类加载器运行原理
+5）Java中GC过程原理|使用的回收算法原理
+6）Redis中hash一致性实现及与hash其他区别
+7）Java多线程、线程池开发、管理Lock与Synchroined区别
+8）Spring IOC/AOP 原理；加载过程的。。。
+
+redis分布式锁
+
+
+设备用户名root
+密码 094b532f
+
+
+tcpsvd 0:21 ftpd ftpd -w /tmp
+killall tcpsvd
+tcpsvd 0:21 ftpd ftpd -w / &   （&表示在后台运行）
+
+tftp 192.168.9.143 -gr device.elf
+chmod 777 device.elf
+./device.elf
+
+
+1.分片上传 √
+2.秒传 （前端计算要上传的文件md5值，上传前与后端验证，存在该md5值则直接上传成功，反正普通上传并记录md5到数据库）
+3.断点续传（*记录写文件的位置使用RandomAccessFile继续写文件）
+
+开发中高效的文件读写
+
+springtask
+
+
+网络通信
+
+
+12.14/12.28 12.21
+
+total     车船  交强  车损                盗抢                三者           找不到第三方  不计免赔
+1655.04   0      0    77493.80（608.51）  77493.80（147.82）  100w（663.18） 15.21         220.32
+1647.91   0      0    76954.40（603.23）  76957.40（147.04）  100w（663.18） 15.08         219.38 
+
+
+mysql性能调优
+1.尽量使用小的数据类型（整型比字符型代价低）
+2.字段尽量设置not null
+
+SHOW STATUS LIKE 'value';
+其中，value是要查询的参数值，一些常用的性能参数如下：
+    a、Connections，连接mysql服务器的次数。
+    b、Uptime，mysql服务器的上线时间。
+    c、Slow_queries,慢查询的次数。
+    d、Com_select，查询操作的次数。
+    e、Com_insert，插入操作的次数。
+    f、Com_update，更新操作的次数。
+    g、Com_delete，删除操作的次数。
+	
+索引使用：
+1.使用like关键字的查询语句。在使用like关键字进行查询的查询语句中，
+如果匹配字符串的第一个字符为"%"，索引不会起作用。只有"%"不在第一个位置，索引才会起到作用。
+2.使用多列索引的查询语句。mysql可以为多个字段创建索引。
+一个索引可以包括16个字段。对于多列索引，
+只有查询条件中使用了这些字段中第1个字段的时候，索引才会被使用。
+3.使用or关键字的查询语句。使用语句的查询条件中只有or关键字，
+且or前后的两个条件中的列都有索引时，查询中才使用索引。
+否则，查询将不使用索引。
+
+
+http劫持:
+原理过程：在用户的浏览器连上被访问的网站服务器，
+发送了HTTP请求后，运营商的路由器会首先收到此次HTTP请求，
+之后运营商路由器的旁路设备标记此TCP连接为HTTP协议，
+之后可以抢在网站服务器返回数据之前发送HTTP协议的302代码进行下载软件的劫持，
+浏览器收到302代码后就会跳转到错误的软件下载地址下载软件了，
+随后网站服务器的真正数据到达后反而会被丢弃。
+或者，旁路设备在标记此TCP连接为HTTP协议后，直接返回修改后的HTML代码，
+导致浏览器中被插入了运营商的广告，随后网站服务器的真正数据到达后最终也是被丢弃。
+解决方法：https（ssl证书支持）
+
+
+
+@Bean：方法级别的注解
+
+
+
+
+&（按位与）：都是1结果才是1，其他都是0 类比&&
+|（按位或）：有1就都是1 类比||
+^（按位异或）：不同为1，相同为0
+
+
+
+
+
+String<StringBuffer（线程安全）< StringBuilder(线程不安全)
+
+
+
+异常（Exception）
+
+
+
+
+依赖注入：1.基于构造器的。2.基于设置函数的。3.基于自动装配的。4.基于注解的
+
+java泛型：对于多种数据类型的重用；指定类型避免类型转换时的异常
+
+
+ThreadLocal:线程局部变量，为每一个使用它的线程提供该变量的副本，从而使各线程各自使用互不影响。
+
+
+2020.1.6 (16.5h)
+1.6  2h
+1.8  2h
+1.9  2h
+1.11 6.5h 8.52-16.52 6.5h
+1.13 2h
+1.20 2h
+
+负载均衡，集群
+
+分布式
+
+hashmap线程安全问题
+
+3.4 2h
+3.9 2h
+3.11 2h
+
+
+hibernate传参 :,?
+
+索引失效的情况
+1.搜索条件中使用了or（想生效必须条件中每个列都加上索引）
+2.like查询以%开头
+3.索引列的数据存在类型转换
+4.where子句对索引列有数学运算
+5.where子句对索引列使用函数
+6.数据量很少以至于全表搜索都比用索引快
+7.符合索引不使用前列则后列也无法使用
+不推荐使用索引的字段
+1.数据不唯一
+2.该字段频繁更新
+
+反射应用场景
+1.动态代理
+2.动态加载配置文件中的类
+
+热门中间件
+redis，Nginx
+
+Git
+提交文件
+1.git add 目标文件.文件后缀（可多次add）
+2.git commit -m “本次提交的注释”（可一次提交多个add的内容）
+
+git init初始化一个仓库
+git ststus查看当前仓库状态（修改了具体哪些文件，没有具体内容）
+git diff 文件名.后缀名（查看当前文件具体修改了哪些内容）
+git log显示从最近到最远的提交日志
+git reset --hard HEAD^回退一个版本
+git reset --hard HEAD^^回退两个版本
+git reset --hard HEAD~100回退100个版本
+cat 文件名.后缀 查看文件内容
+git reset --hard 版本号 回退到目标版本
+git reflog命令的记录
+git checkout -- 文件名.后缀 丢弃该文件在工作区的全部修改
+git reset HEAD 文件名.后缀 将该文件暂存区内容全部回退到工作区内容
+git rm 文件名.后缀 删除版本库中的文件
+git checkout -b 分支名 -b参数表示创建并切换（相当于git branch dev git checkout dev）
+git branch查看当前分支
+git switch 分支名 切换分支
+git switch -c 分支名 创建和切换分支
+git merge 分支名 合并分支
+git branch -d 分支名 删除分支
+git stash 保存当前工作环境
+git stash list 列出保存的工作环境
+git stash apply stash@{0} 恢复当前工作环境，该环境内容不删除
+git stash pop stash@{0} 恢复当前工作环境，该环境内容删除
+git branch -D <name>强行删除
+
+
+redis相关问题
+1.有哪些好处？
+性能好，速度快，存储类型多（strings、map、 list、sets、 sorted sets），所有操作都是原子性的
+2.是单进程单线程的？
+是，所以避免了线程安全问题。大部分情况下单个已经足够使用
+3.持久化机制？各自优缺点？
+写RDB和写AOF两种，
+RDB（默认持久化方式）一次性全量备份
+AOF（需要配置才会启用）增量备份
+4.穿透，击穿，雪崩？
+5.过期键的删除策略？
+定时删除，定期删除，惰性删除
+6.为什么把所有数据存放到内存
+redis就是快速将数据读入内存，再以异步的方式写入磁盘，直接存入磁盘的话，写入磁盘的io会拉低redis性能
+7.集群的主从复制模型是怎样的
+8.key的过期时间和永久有效如何设置
+EXPlRE key second 设置key的过期时间
+ttl key 查看key的过期时间
+PERSIST key 将key持久化
+
+mysql相关问题
+1.相关存储引擎
+InnoDB
+2.索引的实现原理
+3.数据库锁
+4.SQL优化
+5.分库分表全局id
+
+并发相关问题
+1.守护线程和本地线程的区别
+2.上下文切换
+3.线程调度算法
+抢占式，根据优先级优先分配时间片给线程
+4.Executor和Executors区别
+Executor 它是"执行者"接口,它是来执行任务的。
+准确的说,Executor提供了execute()接口来执行已提交的 Runnable 任务的对象。
+Executors是个静态工厂类。
+它通过静态工厂方法返回ExecutorService、
+ScheduledExecutorService、ThreadFactory 和 Callable 等类的对象
+5.并发三要素
+原子性: 一个不可再被分割的颗粒。原子性指的是一个或多个操作要么全部执行成功要么全部执行失败。
+有序性: 程序执行的顺序按照代码的先后顺序执行。（处理器可能会对指令进行重排序）
+可见性: 一个县城对共享变量的修改,另一个线程能够立刻看到。
+6.线程池的创建方式
+1.固定线程大小
+2.缓存线程
+3.单个任务
+4.周期任务
+
+spring相关问题
+1.BeanFactory和ApplicationContext区别
+都可以当spring的容器，ApplicationContext是BeanFactory的子接口，拓展了很多方法
+可以国际化，统一资源文件的访问方式，加载多个配置文件，提供在监听器中注册bean
+BeanFactory延迟注入bean使用的时候才加载实例化，这样就不好查看bean的问题
+ApplicationContext在容器启动的时候就创建所有的bean，所以启动慢，占内存
+BeanFactory通常以编程的方式被创建，ApplicationContext还能以声明的方式创建
+2.熟悉的spring核心类
+3.spring的事务
+4.spring的事务实现方式
+
+
+还款计划重定价
+https://www.592xuexi.com
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
